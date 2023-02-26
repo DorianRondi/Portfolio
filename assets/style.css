@@ -1,0 +1,55 @@
+@charset "UTF-8";
+*, ::after, ::before {
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  width: 80%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.portfolio_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 0.625rem;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin: 1.825rem auto;
+  border: 1px dashed black;
+}
+.portfolio_grid_item {
+  width: 300px;
+  background-color: #333333;
+}
+
+img {
+  width: 100%;
+}
+
+/* SMARTPHONE -Ecran inférieur a 425px- */
+@media screen and (width <= 26.5625rem) {
+  #wrapper {
+    width: 100%;
+  }
+  .portfolio_grid {
+    grid-template-columns: 100%;
+  }
+  .portfolio_grid_item {
+    width: 100%;
+  }
+  .portfolio_grid > div:nth-child(1n+5) {
+    display: none;
+  }
+}
+/* TABLETTE PORTRAIT -Ecran inférieur a 768px- */
+@media screen and (26.5625rem < width <= 48rem) {
+  .portfolio_grid > div:nth-child(1n+5) {
+    display: none;
+  }
+}
+/* TABLETTE PAYSAGE -Ecran inférieur a 1024px- *//*# sourceMappingURL=style.css.map */
