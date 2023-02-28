@@ -9,6 +9,7 @@ html{
     scroll-behavior: smooth;
 }
 header{
+    padding:15px;
     background-color: #00BAF0;
     background: linear-gradient(to right, #f46b45, #eea849);
     color: #fff;}
@@ -45,11 +46,17 @@ button.retour{
 #dorian img{
     display:none;
 }
+a > span{
+  display: none;
+}
 /* SMARTPHONE -Ecran supérieur à 425px- */
 @media screen and (width > 26.5625rem) {
     .portfolio_flex_item:nth-child(-1n+2){
         display:block;
         flex-grow: 0;
+    }
+    a > span{
+      display: inline;
     }
 }
 /* TABLETTE -Ecran supérieur a 768px- */
