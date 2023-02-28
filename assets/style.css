@@ -1,10 +1,24 @@
 @charset "UTF-8";
 *, ::after, ::before {
   box-sizing: border-box;
-  font-size: 16px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: #00BAF0;
+  background: linear-gradient(to right, #f46b45, #eea849);
+  color: #fff;
+}
+
+img {
+  width: 100%;
 }
 
 #wrapper {
@@ -12,69 +26,54 @@
   margin: auto;
 }
 
-header, main, footer {
-  width: 100%;
-  border: 1px dashed red;
-}
-
-header > div,
-main > section,
-footer > div {
-  margin: auto;
-  max-width: 1200px;
-  border: 1px solid blue;
-}
-
 button.retour {
+  z-index: 1000;
   position: fixed;
   width: 25px;
   height: 25px;
-  bottom: 50px;
-  right: 30px;
+  bottom: 10px;
+  right: 10px;
 }
 
-.portfolio_grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
-  gap: 0.625rem;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-  margin: 1.825rem auto;
-  border: 1px dashed black;
-}
-.portfolio_grid_item {
-  width: 300px;
-  background-color: #333333;
-}
-
-img {
+.portfolio_flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   width: 100%;
 }
+.portfolio_flex_item {
+  flex-grow: 1;
+}
+.portfolio_flex_item:nth-child(1n+2) {
+  display: none;
+}
 
-/* SMARTPHONE -Ecran inférieur a 425px- */
-@media screen and (width <= 26.5625rem) {
-  #wrapper {
-    width: 100%;
+#dorian img {
+  display: none;
+}
+
+/* SMARTPHONE -Ecran supérieur à 425px- */
+@media screen and (width > 26.5625rem) {
+  .portfolio_flex_item:nth-child(-1n+2) {
+    display: block;
+    flex-grow: 0;
   }
-  .portfolio_grid {
-    grid-template-columns: 100%;
+}
+/* TABLETTE -Ecran supérieur a 768px- */
+@media screen and (width > 48rem) {
+  .portfolio_flex_item:nth-child(-1n+3) {
+    display: block;
+    flex-grow: 0;
   }
-  .portfolio_grid_item {
-    width: 100%;
-  }
-  .portfolio_grid > div:nth-child(1n+5) {
-    display: none;
+}
+/* DESKTOP -Ecran supérieur a 1024px- */
+@media screen and (width > 64rem) {
+  .portfolio_flex_item:nth-child(-1n+4) {
+    display: block;
+    flex-grow: 0;
   }
   button.retour {
-    bottom: 10px;
-    right: 10px;
+    bottom: 15px;
+    right: 30px;
   }
-}
-/* TABLETTE PORTRAIT -Ecran inférieur a 768px- */
-@media screen and (26.5625rem < width <= 48rem) {
-  .portfolio_grid > div:nth-child(1n+5) {
-    display: none;
-  }
-}
-/* TABLETTE PAYSAGE -Ecran inférieur a 1024px- *//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
