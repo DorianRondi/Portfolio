@@ -6,34 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dorian RONDI | Web Dev Junior</title>
     <link rel="stylesheet" href="assets/style.css"/>
+    <link rel="stylesheet" href="assets/burger.css">
 </head>
 
 <body>
+    <button class="retour" title="Retour au menu principal">
+        <a href="#top"><img src="img/icons/top-100x100.png" alt="Retour au menu principal de la page actuel"/></a>
+    </button>
     <div id="wrapper">
+
         <header>
-            <div>
-                <div id="logoDorian">
-                    <a href="index.html">
-                        <h1>Dorian RONDI</h1>
-                        <h2>Develloper Web</h2>
-                    </a>
-                </div>
-                <div class="menu">
-                    <nav>
-                        <ul>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#dorian">Dorian</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
+            <div id="logoDorian">
+                <a href="index.html">
+                    <h1>Dorian RONDI</h1>
+                    <h2>Develloper Web</h2>
+                </a>
             </div>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+            <nav class="menu">
+                <a href="#portfolio">Portfolio</a>
+                <a href="#dorian">Dorian</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </header>
+
         <main>
             <section id="portfolio">
                 <h3>Portfolio</h3>
-                <div class="portfolio_grid">
-                    <div class="portfolio_grid_item" title="projet 1">
+                <div class="portfolio_flex">
+                    <div class="portfolio_flex_item" title="projet 1">
                         <a href="#">
                             <img
                             src="https://source.unsplash.com/random/400x300?snowboard?sig=1"
@@ -41,7 +45,7 @@
                             />
                         </a>
                     </div>
-                    <div class="portfolio_grid_item" title="projet 2">
+                    <div class="portfolio_flex_item" title="projet 2">
                         <a href="#">
                             <img
                             src="https://source.unsplash.com/random/400x300?underwear?sig=2"
@@ -49,7 +53,7 @@
                             />
                         </a>
                     </div>
-                    <div class="portfolio_grid_item" title="projet 3">
+                    <div class="portfolio_flex_item" title="projet 3">
                         <a href="#">
                             <img
                             src="https://source.unsplash.com/random/400x300?snowboard?sig=3"
@@ -57,7 +61,7 @@
                             />
                         </a>
                     </div>
-                    <div class="portfolio_grid_item" title="projet 4">
+                    <div class="portfolio_flex_item" title="projet 4">
                         <a href="#">
                             <img
                             src="https://source.unsplash.com/random/400x300?forest?sig=4"
@@ -65,7 +69,7 @@
                             />
                         </a>
                     </div>
-                    <div class="portfolio_grid_item" title="projet 5">
+                    <div class="portfolio_flex_item" title="projet 5">
                         <a href="#">
                             <img
                             src="https://source.unsplash.com/random/400x300?alpes?sig=5"
@@ -73,7 +77,7 @@
                             />
                         </a>
                     </div>
-                    <div class="portfolio_grid_item" title="projet 6">
+                    <div class="portfolio_flex_item" title="projet 6">
                         <a href="#">
                             <img
                             src="https://source.unsplash.com/random/400x300?desert?sig=6"
@@ -81,7 +85,7 @@
                             />
                         </a>
                     </div>
-                    <div class="portfolio_grid_item" title="projet 7">
+                    <div class="portfolio_flex_item" title="projet 7">
                         <a href="#">
                             <img
                             src="https://source.unsplash.com/random/400x300?animal?sig=7"
@@ -89,7 +93,7 @@
                             />
                         </a>
                     </div>
-                    <div class="portfolio_grid_item" title="projet 8">
+                    <div class="portfolio_flex_item" title="projet 8">
                         <a href="#">
                             <img
                             src="https://source.unsplash.com/random/400x300?paris?sig=8"
@@ -97,7 +101,7 @@
                             />
                         </a>
                     </div>
-                    <div class="portfolio_grid_item" title="projet 9">
+                    <div class="portfolio_flex_item" title="projet 9">
                         <a href="#">
                             <img
                             src="https://source.unsplash.com/random/400x300?fish?sig=9"
@@ -105,7 +109,7 @@
                             />
                         </a>
                     </div>
-                    <div class="portfolio_grid_item" title="projet 10">
+                    <div class="portfolio_flex_item" title="projet 10">
                         <a href="#">
                             <img
                             src="https://source.unsplash.com/random/400x300?butt?sig=10"
@@ -113,7 +117,7 @@
                             />
                         </a>
                     </div>
-                    <div class="portfolio_grid_item" title="projet 11">
+                    <div class="portfolio_flex_item" title="projet 11">
                         <a href="#">
                             <img
                             src="https://source.unsplash.com/random/400x300?leg?sig=11"
@@ -121,7 +125,7 @@
                             />
                         </a>
                     </div>
-                    <div class="portfolio_grid_item" title="projet 12">
+                    <div class="portfolio_flex_item" title="projet 12">
                         <a href="#">
                             <img
                             src="https://source.unsplash.com/random/400x300?boob?sig=12"
@@ -149,6 +153,7 @@
             </section>
             <section id="contact"></section>
         </main>
+
         <footer>
             <div class="socialMedia">
                 <a
@@ -191,8 +196,5 @@
             </a>
         </footer>
     </div>
-    <button class="retour">
-        <a href="#top"><img src="img/icons/top-100x100.png" alt="Retour au menu principal de la page actuel" title="Retour au menu principal" /></a>
-    </button>
 </body>
 </html>
