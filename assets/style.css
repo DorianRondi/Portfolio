@@ -3,7 +3,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: black;
   list-style-type: none;
   text-decoration: none;
 }
@@ -13,11 +12,16 @@ html {
   scroll-behavior: smooth;
 }
 
+body,
+a {
+  font-size: 20px;
+  color: black;
+}
+
 header {
   padding: 15px;
   background-color: hsl(100, 50%, 50%);
   background: linear-gradient(to right, hsl(100, 50%, 35%), hsl(100, 50%, 65%));
-  color: white;
 }
 
 img {
@@ -35,13 +39,21 @@ h3 {
   margin: auto;
 }
 
-button.retour {
+.retour {
   z-index: 100000000000000000000000000000000000000000000000000000000000;
   position: fixed;
-  width: 25px;
-  height: 25px;
+  width: 32px;
+  height: 32px;
   bottom: 10px;
   right: 10px;
+  border: 1px solid black;
+  box-shadow: 3px 5px 1px black;
+  background-color: white;
+}
+.retour:active {
+  bottom: 8px;
+  right: 8px;
+  box-shadow: 0 0 0 white;
 }
 
 .portfolio_flex {
@@ -63,27 +75,33 @@ button.retour {
 
 footer {
   margin-top: 1rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: hsl(100, 50%, 50%);
 }
 
+footer > a,
+.socialMedia {
+  margin-top: 0.5rem;
+}
+
 .socialMedia nav {
+  display: flex;
   padding-right: 1rem;
   width: 100%;
 }
 .socialMedia nav a {
   display: block;
   margin-left: 1rem;
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
 }
 .socialMedia nav a img,
 .socialMedia nav a svg {
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 a > span {
@@ -113,7 +131,7 @@ a > span {
     display: block;
     flex-grow: 0;
   }
-  button.retour {
+  .retour {
     bottom: 20px;
     right: 30px;
   }
