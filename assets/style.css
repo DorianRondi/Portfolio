@@ -36,7 +36,7 @@ h3 {
 }
 
 button.retour {
-  z-index: 1000;
+  z-index: 100000000000000000000000000000000000000000000000000000000000;
   position: fixed;
   width: 25px;
   height: 25px;
@@ -114,7 +114,7 @@ a > span {
     flex-grow: 0;
   }
   button.retour {
-    bottom: 15px;
+    bottom: 20px;
     right: 30px;
   }
 }/*# sourceMappingURL=style.css.map */
