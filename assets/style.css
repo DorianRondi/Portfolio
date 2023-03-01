@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: black;
   list-style-type: none;
   text-decoration: none;
 }
@@ -14,9 +15,9 @@ html {
 
 header {
   padding: 15px;
-  background-color: #00BAF0;
-  background: linear-gradient(to right, #f46b45, #eea849);
-  color: #fff;
+  background-color: hsl(100, 50%, 50%);
+  background: linear-gradient(to right, hsl(100, 50%, 35%), hsl(100, 50%, 65%));
+  color: white;
 }
 
 img {
@@ -66,20 +67,21 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: hsl(100, 75%, 50%);
+  background-color: hsl(100, 50%, 50%);
 }
 
 .socialMedia nav {
   padding-right: 1rem;
   width: 100%;
-  border: 1px solid black;
 }
-
 .socialMedia nav a {
+  display: block;
   margin-left: 1rem;
+  width: 2rem;
+  height: 2rem;
 }
-
-svg {
+.socialMedia nav a img,
+.socialMedia nav a svg {
   width: 2rem;
   height: 2rem;
 }
@@ -100,14 +102,14 @@ a > span {
 }
 /* TABLETTE -Ecran supérieur a 768px- */
 @media screen and (width > 48rem) {
-  .portfolio_flex_item:nth-child(-1n+3) {
+  .portfolio_flex_item:nth-child(-1n+4) {
     display: block;
     flex-grow: 0;
   }
 }
 /* DESKTOP -Ecran supérieur a 1024px- */
 @media screen and (width > 64rem) {
-  .portfolio_flex_item:nth-child(-1n+4) {
+  .portfolio_flex_item:nth-child(-1n+12) {
     display: block;
     flex-grow: 0;
   }
