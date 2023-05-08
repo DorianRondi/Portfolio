@@ -1,0 +1,50 @@
+.progressBarBlock {
+  position: relative;
+  margin: 10px auto;
+  width: 400px;
+  border: 5px dashed blueviolet;
+}
+
+.disc1,
+.disc2 {
+  margin: auto;
+}
+
+.disc1 {
+  fill: green;
+}
+
+.disc2 {
+  border: 5px dashed orange;
+  fill: blueviolet;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+}
+
+.slider,
+.rotoslider {
+  z-index: 1;
+  border: 3px solid black;
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  background-color: black;
+}
+
+.slider {
+  /*display:none;*/
+  top: 0;
+  left: 50%;
+}
+
+.rotoslider {
+  top: 25%;
+  left: 60%;
+}
+
+.rotoslider {
+  transform-origin: bottom right;
+  transform: rotate(45deg);
+}/*# sourceMappingURL=progressCircle.css.map */
